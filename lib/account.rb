@@ -1,7 +1,7 @@
 require 'date'
 
 class Account
-
+    attr_accessor :account_status
     STANDARD_VAILIDITY_YRS = 5
 
     def initialize

@@ -2,10 +2,13 @@ require 'date'
 
 class Account
     attr_accessor :account_status
+    attr_accessor :owner
+    
     STANDARD_VAILIDITY_YRS = 5
 
-    def initialize
+    def initialize (attrs = {})
         @account_status = :active
+        set_owner(attrs[:owner])
     end
 
 
@@ -21,4 +24,15 @@ class Account
       account.account_status = :deactivated
     end
 
+end
+
+private
+
+
+def set_owner(obj)
+    obj == nil ?  missing_owner : @owner = obj
+end
+
+def missing_owner
+    raise "An Account owner is required"
 end

@@ -1,10 +1,10 @@
 require 'pry'
+require 'date'
 
 class Atm
   
   attr_accessor :funds
-  require 'date'
-
+  
   def initialize
     @funds = 1000
   end

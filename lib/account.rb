@@ -4,7 +4,12 @@ class Account
 
     STANDARD_VAILIDITY_YRS = 5
 
-    def random_pin
+    def initialize
+        @account_status = :active
+    end
+
+
+    def pin_code
         rand(1000..9999)
     end
     

@@ -1,5 +1,6 @@
 require './lib/person.rb'
 require './lib/atm.rb'
+require
 
 describe Person do
     subject {described_class.new(name: 'Thomas')}
@@ -14,5 +15,10 @@ describe Person do
 
     it 'it is expected to have a :cash attribute with the value of 0 on initialize' do
       expect(subject.cash).to eq 0
-end
+    end
+
+    it 'is expected to have a :account attribute' do
+        expect(subject.account).to be nil
+    end
+
 end

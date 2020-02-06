@@ -23,7 +23,6 @@ class Account
     def self.deactivate(account)
       account.account_status = :deactivated
     end
-
 end
 
 private

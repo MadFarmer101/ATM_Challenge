@@ -30,6 +30,7 @@ class Person
     @account == nil ? missing_account : deposit(amount)
   end
 
+  
 private
 
 def set_name(obj)
@@ -60,7 +61,6 @@ end
   def missing_atm
     raise RuntimeError, 'An ATM is required'
   end
-
 end
 
 

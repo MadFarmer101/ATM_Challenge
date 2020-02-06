@@ -8,7 +8,7 @@ class Person
     
 
   def initialize (attrs = {})
-    set_name(attrs[:name])
+    @name = set_name(attrs[:name])
     @cash = 0
     @account = nil
   end
@@ -16,17 +16,26 @@ class Person
   def create_account
     @account = Account.new(owner: self)
   end
+
+  def deposit(amount)
+    account.balance = account.balance + amount
+  end
+
+
+def is_there_account?(object)
+  object == nil ? missing_account : deposit
+end
 end
 
-def deposit(amount, account)
- @account.balance + Amount 
- @cash - Amount 
-end
 
 private
 
 def set_name(obj)
   obj == nil ?  missing_name : @name = obj
+end
+
+def missing_account
+  raise RuntimeError, 'No account present'
 end
 
 def missing_name

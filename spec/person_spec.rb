@@ -37,11 +37,16 @@ describe Person do
     end
 
     describe 'can manage funds if an account been created' do
-      binding.pry
-      let(:atm) { Atm.new }
-      before { subject.create_account }
-      it 'can deposit funds' do
-        expect(subject.deposit(100)).to be_truthy
+        let(:atm) {Atm.new}
+        before {subject.create_account}
+               
+        it 'can deposit funds' do
+            expect(subject.deposit(100)).to be_truthy
+        end
+    end
+    describe 'can not manage funds if no account has been created do' do
+      it 'can\'t deposit funds' do
+        expect { subject.deposit(100)}.to raise_error(RuntimeError, 'No account present')
       end
     end
-end
+  end

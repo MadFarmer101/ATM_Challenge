@@ -1,14 +1,15 @@
 require 'date'
 
 class Account
-    attr_accessor :account_status
-    attr_accessor :owner
+    attr_accessor :account_status, :owner, :balance
+    
     
     STANDARD_VAILIDITY_YRS = 5
 
     def initialize (attrs = {})
         @account_status = :active
-        set_owner(attrs[:owner])
+        @owner = set_owner(attrs[:owner])
+        @balance = 0
     end
 
 

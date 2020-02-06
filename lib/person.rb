@@ -45,13 +45,18 @@ def withdraw_funds(args)
   response[:status] == true ? increase_cash(response) : response
 end
 
-def missing_account
+  def missing_account
   raise RuntimeError, 'No account present'
-end
+  end
 
-def missing_name
+  def missing_name
   raise "A name is required"
-end
+  end
+
+  def missing_atm
+    raise RuntimeError, 'An ATM is required'
+  end
+
 end
 
 

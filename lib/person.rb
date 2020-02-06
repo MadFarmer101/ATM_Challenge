@@ -14,8 +14,6 @@ class Person
   def set_account(account)
     @account = nil
   end
-
-
 end
 
 

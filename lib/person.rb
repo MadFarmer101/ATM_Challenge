@@ -7,7 +7,7 @@ class Person
     attr_accessor :name, :cash, :account
     
 
-  def initialize (attrs = {})
+  def initialize(attrs = {})
     @name = set_name(attrs[:name])
     @cash = 0
     @account = nil
@@ -19,14 +19,13 @@ class Person
 
   def deposit(amount)
     account.balance = account.balance + amount
+    @cash -= amount
   end
 
 
-def is_there_account?(object)
-  object == nil ? missing_account : deposit
+def is_there_account?(amount)
+  @account == nil ? missing_account : deposit(amount)
 end
-end
-
 
 private
 
@@ -41,3 +40,7 @@ end
 def missing_name
   raise "A name is required"
 end
+end
+
+
+

@@ -1,5 +1,6 @@
 require './lib/person.rb'
 require './lib/atm.rb'
+require 'pry'
 
 
 
@@ -33,5 +34,14 @@ describe Person do
         it 'with himself as an owner' do
           expect(subject.account.owner).to be subject
         end
+    end
+
+    describe 'can manage funds if an account been created' do
+      binding.pry
+      let(:atm) { Atm.new }
+      before { subject.create_account }
+      it 'can deposit funds' do
+        expect(subject.deposit(100)).to be_truthy
+      end
     end
 end

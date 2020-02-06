@@ -1,5 +1,6 @@
 require 'date'
 require './lib/account.rb'
+require './lib/atm.rb'
 
 class Person
 
@@ -15,9 +16,12 @@ class Person
   def create_account
     @account = Account.new(owner: self)
   end
-
 end
 
+def deposit(amount, account)
+ @account.balance + Amount 
+ @cash - Amount 
+end
 
 private
 

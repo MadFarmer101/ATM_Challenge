@@ -1,4 +1,5 @@
 require './lib/account.rb'
+require './lib/atm.rb'
 
 describe Account do
    let(:person) {instance_double('Person', name: 'Thomas')}

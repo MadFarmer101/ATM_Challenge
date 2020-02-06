@@ -1,5 +1,6 @@
 require 'date'
 require './lib/account.rb'
+require './lib/atm.rb'
 
 class Person
 
@@ -7,7 +8,7 @@ class Person
     
 
   def initialize (attrs = {})
-    set_name(attrs[:name])
+    @name = set_name(attrs[:name])
     @cash = 0
     @account = nil
   end
@@ -15,6 +16,12 @@ class Person
   def create_account
     @account = Account.new(owner: self)
   end
+
+  def deposit(amount)
+    account.balance = account.balance + amount
+  end
+
+
 
 end
 

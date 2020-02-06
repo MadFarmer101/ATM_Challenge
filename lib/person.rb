@@ -8,10 +8,11 @@ class Person
   def initialize (attrs = {})
     set_name(attrs[:name])
     @cash = 0
+    @account = nil
   end
 
   def set_account(account)
-    @account = nil
+    
   end
 end
 

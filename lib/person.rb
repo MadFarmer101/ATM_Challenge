@@ -3,7 +3,7 @@ require './lib/account.rb'
 
 class Person
 
-    attr_accessor :name, :cash, :account, :owner
+    attr_accessor :name, :cash, :account
     
 
   def initialize (attrs = {})
@@ -13,7 +13,7 @@ class Person
   end
 
   def create_account
-    @account = Account.new(set_owner(:owner))
+    @account = Account.new(owner: self)
   end
 
 end

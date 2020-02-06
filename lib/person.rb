@@ -1,8 +1,9 @@
 require 'date'
+require './lib/account.rb'
 
 class Person
 
-    attr_accessor :name, :cash, :account
+    attr_accessor :name, :cash, :account, :owner
     
 
   def initialize (attrs = {})
@@ -11,9 +12,10 @@ class Person
     @account = nil
   end
 
-  def set_account(account)
-    
+  def create_account
+    @account = Account.new(set_owner(:owner))
   end
+
 end
 
 

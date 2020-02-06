@@ -4,17 +4,17 @@ class Person
 
     attr_accessor :name
 
-    def initialize (attrs = {})
-        @name = :name 
-    end
-
+  def initialize (attrs = {})
+    set_name(attrs[:name])
+  end
 end
 
 private
 
-def name(obj)
+def set_name(obj)
   obj == nil ?  missing_name : @name = obj
 end
 
 def missing_name
   raise "A name is required"
+end

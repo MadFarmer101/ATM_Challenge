@@ -2,9 +2,8 @@ require 'date'
 
 class Person
 
-    attr_accessor :name
-    attr_accessor :cash
-    attr_accessor :account
+    attr_accessor :name, :cash, :account
+    
 
   def initialize (attrs = {})
     set_name(attrs[:name])

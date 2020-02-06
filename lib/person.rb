@@ -18,7 +18,7 @@ class Person
   end
 
   def deposit(amount)
-    account.balance = account.balance + amount
+    account.balance += amount
     @cash -= amount
   end
 
@@ -36,13 +36,17 @@ def set_name(obj)
   obj == nil ?  missing_name : @name = obj
 end
 
+def add_cash(response)
+  @cash += response[:amount]
+end
+
 def withdraw_funds(args)
   args[:atm] == nil ? missing_atm : atm = args[:atm]
   account = @account
   amount = args[:amount]
   pin = args[:pin]
   response = atm.withdraw(amount, pin, account)
-  response[:status] == true ? increase_cash(response) : response
+  response[:status] == true ? add_cash(response) : response
 end
 
   def missing_account

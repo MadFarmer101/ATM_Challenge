@@ -3,7 +3,7 @@ require 'person'
 require 'atm'
 
 class Account
-    attr_accessor :account_status, :owner, :balance
+    attr_accessor :account_status, :owner, :balance, :pin_code
     
     
     STANDARD_VAILIDITY_YRS = 5
@@ -12,12 +12,9 @@ class Account
         @account_status = :active
         @owner = set_owner(attrs[:owner])
         @balance = 0
+        @pin_code = rand(1000..9999)
     end
-
-
-    def pin_code
-        rand(1000..9999)
-    end
+   
     
     def exp_date
         Date.today.next_year(Account::STANDARD_VAILIDITY_YRS).strftime('%m/%y')

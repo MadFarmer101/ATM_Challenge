@@ -10,9 +10,9 @@ How?
 
 ##### ATM will:
 
-1- Withdraw money.
-2- Capable of deposit money on clients account/ Create account.
-3- Capable of recognize different sad paths like: Card Expired, Wrong ping, Account check.
+1. Withdraw money.
+2. Capable of deposit money on clients account/ Create account.
+3. Capable of recognize different sad paths like: Card Expired, Wrong ping, Account check.
 
 
 ###### A list of the test passed can be found futher below**
@@ -24,8 +24,8 @@ rspec and pry.
 
 ##### Setup instructions:
 
-1- Have VSC
-2- Install gems as mentioned here:
+1. Have VSC
+2. Install gems as mentioned here:
    
     Head do the main directory of the ATM_Challenge to install Rspec.
     use: $gem install bundler

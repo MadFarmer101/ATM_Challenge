@@ -105,3 +105,6 @@ rspec and pry.
 
 
 ###### This work is under MIT (free software license) quote/link us uppon usage.
+
+We worked from this repo:
+https://github.com/JaimeCrz/ATM_Challenge#a-list-of-the-test-passed-can-be-found-futher-below

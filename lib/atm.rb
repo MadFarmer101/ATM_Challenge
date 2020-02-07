@@ -1,7 +1,6 @@
 require 'pry'
 require 'date'
-require 'person'
-require 'account'
+
 
 class Atm
   

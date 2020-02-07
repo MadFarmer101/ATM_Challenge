@@ -1,6 +1,4 @@
 require 'date'
-require 'person'
-require 'atm'
 
 class Account
     attr_accessor :account_status, :owner, :balance, :pin_code

@@ -8,7 +8,7 @@ Our code will simulate the behaviour of a real ATM.
 How?
 
 
-##### ATM will:
+##### User/Atm will:
 
 1. Withdraw money.
 2. Capable of deposit money on clients account/ Create account.
@@ -24,8 +24,9 @@ rspec and pry.
 
 ##### Setup instructions:
 
-1. Have VSC
-2. Install gems as mentioned here:
+1. Download this repository: https://github.com/JaimeCrz/ATM_Challenge 
+2. You will need ruby if not install use the follow tutorial (Keep in mind your OS!) : https://www.ruby-lang.org/en/documentation/installation/
+2. Install the following gems if you do not own them. How?:
    
     Head do the main directory of the ATM_Challenge to install Rspec.
     use: $gem install bundler
@@ -39,13 +40,26 @@ rspec and pry.
 
 ##### How to use?
 
-Will be updated soon.
+1. Head to the directory where you saved your files with your terminal using: cd "path"
+
+2. Load the files with: irb: load './lib/person.rb'  /// load './lib/atm.rb' /// load './lib/account.rb'
+
+3. Create an ATM with : atm = Atm.new
+
+4. Create an user: person = Person.new(name: 'Thomas')
+
+5. Give the user some money: person.cash = Amount you desire.
+
+6. Creates an account for your user: person.create_account (do not use the name of the person, use the command as written.)
+
+7. Inactivate and reactivate user account: person.account.inactivate \\ person.account.activate
+
+8. User is capable of deposit his money with: person.deposit(amount) and is able to withdraw with: person.withdraw(amount)
 
 
-##### We want to thank Craft Academy/Craftoverflow to help us with this project. 
+##### We want to thank Craft Academy/Craftoverflow to help us with this project and our colleges. 
 
 ##### Plans to update are on hold at the moment but it's in need of refactoring.
-
 
 
 

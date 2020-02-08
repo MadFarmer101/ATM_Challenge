@@ -1,6 +1,5 @@
 require 'date'
 
-
 class Account
     attr_accessor :account_status, :owner, :balance, :pin_code
     
